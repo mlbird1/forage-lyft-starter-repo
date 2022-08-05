@@ -8,7 +8,7 @@ class SpindlerBattery(Car, ABC):
         super().__init__(last_service_date)
 
     def battery_should_be_serviced(self):
-        if self.current_date - self.last_service_date > 2:
+        if self.current_date - self.last_service_date > 3:
             return True
         else:
             return False
