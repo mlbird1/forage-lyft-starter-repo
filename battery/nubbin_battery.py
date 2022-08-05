@@ -8,4 +8,7 @@ class NubbinBattery(Car, ABC):
         super().__init__(last_service_date)
 
     def battery_should_be_serviced(self):
-        return self.current_date - self.last_service_date > 4
+        if self.current_date.year - self.last_service_date.year > 4:
+            return True
+        else:
+            return False
